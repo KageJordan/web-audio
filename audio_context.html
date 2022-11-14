@@ -1,0 +1,151 @@
+<!doctype html>
+<head>
+  <title>Web Audio Api - Audio Context</title>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+  <style>
+  
+    :root {
+      --flex-direction: column;
+      --line-height: 4em;
+    }
+    
+    @media(min-width: 250px) {
+      :root {
+        --flex-direction: row;
+        --line-height: 8em;
+      }
+    }
+       
+    h1{
+      text-align: center;
+    }
+      
+    main {
+      outline: thick double;
+      background-color: whitesmoke;
+    }
+       
+    fieldset {
+      display: flex;
+      border: none;
+      background: yellow;
+    }
+    form > fieldset {
+      flex-direction: var(--flex-direction);
+    }
+    fieldset fieldset {
+      background: red;
+    }
+    fieldset input[type="range"] {
+      width: 20vw;
+      display: inline-block;
+      top: 0.3em;
+      position: relative;
+    }
+    
+    form > fieldset > label {
+      background: turquoise;
+      line-height: var(--line-height);
+    }
+    form > header {
+      background:yellow;
+    }
+    
+    [type="checkbox"] {
+    }
+  
+
+  </style>
+ 
+  <script></script>
+</head>
+
+ 
+<body>
+  <header>
+    <h1>DevPunks Sequencer</h1>    
+  </header>
+
+<main>
+  <form action=#>
+    <header>DevPunks Sequencer
+      <label>BPM
+        <input type=range min=10 max=522 value=251>
+      </label>
+  
+      <label>Play
+        <input name="Play" type="checkbox">
+      </label>
+    </header>
+ 
+<fieldset><legend>Sweep</legend>
+  <label>Attack
+    <input type="range"name="Attack" min="0" max="1" value="0.2" step="0.1">
+  </label>
+
+  <label>Release
+    <input type="range" name="Release" min="0" max="1" value="0.5" step="0.1">
+  </label>
+
+  <fieldset><legend hidden>Checkboxes</legend>
+    <label><input name="Pad1" type="checkbox"></label>
+    <label><input name="Pad2" type="checkbox"></label>
+    <label><input name="Pad3" type="checkbox"></label>
+    <label><input name="Pad4" type="checkbox"></label>
+   </fieldset>
+ </fieldset>
+ 
+<fieldset><legend>Pulse</legend>
+  <label>Hz
+    <input type="range" name="Hertz" min="660" max="1320" value="880" step="1">
+  </label>
+ 
+  <label>LFO
+    <input type="range" name="LFO"" min="20" max="40" value="30" step="1">
+  </label>
+ 
+  <fieldset><legend hidden>Checkboxes</legend>
+    <label><input name="Pad5" type="checkbox"></label>
+    <label><input name="Pad6" type="checkbox"></label>
+    <label><input name="Pad7" type="checkbox"></label>
+    <label><input name="Pad8" type="checkbox"></label>
+   </fieldset>
+</fieldset>
+ 
+<fieldset><legend>Noise</legend>
+  <label>Duration
+    <input type="range" name="Duration" min="0" max="2" value="1" step="0.1">
+  </label>
+ 
+  <label>Band
+    <input type="range" name="Band" min="400" max="1200" value="1000" step="5">
+  </label>
+ 
+  <fieldset><legend hidden>Checkboxes</legend>
+    <label><input name="Pad9" type="checkbox"></label>
+    <label><input name="Pad10" type="checkbox"></label>
+    <label><input name="Pad11" type="checkbox"></label>
+    <label><input name="Pad12" type="checkbox"></label>
+  </fieldset>
+</fieldset>
+ 
+<fieldset><legend>DTMF</legend>
+  <label>Rate
+    <input type="range" name="Rate" min="0.1" max="2" value="1" step="0.1">
+  </label>
+
+  <fieldset><legend hidden>Checkboxes</legend> 
+    <label><input name="Pad13" type="checkbox"></label>
+    <label><input name="Pad14" type="checkbox"></label>
+    <label><input name="Pad15" type="checkbox"></label>
+    <label><input name="Pad16" type="checkbox"></label>
+  </fieldset>
+</fieldset>
+ 
+  </form>  
+</main>
+ 
+</body>
