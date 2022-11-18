@@ -60,7 +60,76 @@
 
   </style>
  
-  <script></script>
+  <script>
+    const
+      form = document.querySelector  ('body > form')
+    , fieldsets = form.querySelectorAll ('fieldsets')
+
+    function initialize () 
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+      form.addEventListener ( 'submit', submit )
+
+      for ( let fieldset of fieldsets )
+        configure (fieldset)
+
+    } // initialize
+
+    function configure (fieldset) {
+      const
+        ranges = fieldset.querySelectorAll ('[type=range]')
+      , checkboxes = fieldset.querySelectorAll ('[type=checkbox]')
+
+      for ( let range of ranges ) {
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
+        // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+        range.addEventListener ('input', listen)
+      }
+
+      for( let box of checkboxes ) {
+        // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+        // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+        box.addEventListener ('change', listen)
+      }
+    } // configure
+
+    
+    // ----------------------------------------------------------------------
+    // Events - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+    // Event Handlers - https://developer.mozilla.org/en-US/docs/Web/Events
+    // e(vent) - https://developer.mozilla.org/en-US/docs/Web/API/Event
+    // ----------------------------------------------------------------------
+
+    function listen (e) { 
+      e.preventDefault () // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+
+      console.log ( 'Event listener for DOM element:', e.target )
+    } // listen
+    
+    // ----------------------------------------------------------------------
+    // https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData
+    // https://developer.mozilla.org/en-US/docs/Web/API/FormData
+    // ----------------------------------------------------------------------
+    function submit (e) {
+      e.preventDefault () // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+
+      const data = new FormData ( e.target ) // triggers formdata event
+      
+      console.log ( 'FormData:', data )
+    } // submit
+    
+    // ----------------------------------------------------------------------
+    // https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent
+    // https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent
+    // ----------------------------------------------------------------------
+    function formdata (e) {
+
+      e.preventDefault () // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+
+      console.log ( 'FormData:', e.formdata )
+    } // formdata
+
+    initialize () // run program
+  </script>
 </head>
 
  
