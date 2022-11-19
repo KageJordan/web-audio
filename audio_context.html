@@ -1,63 +1,63 @@
 <!doctype html>
 <head>
-    <title>Web Audio Api - Audio Context</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <style>
-        :root {
-            --flex-direction: column;
-            --line-height: 4em;
-        }
+  <title>Web Audio Api - Audio Context</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  :root {
+    --flex-direction: column;
+    --line-height: 4em;
+  }
 
-        @media(min-width: 250px) {
-            :root {
-                --flex-direction: row;
-                --line-height: 8em;
-            }
-        }
+  @media(min-width: 250px) {
+    :root {
+      --flex-direction: row;
+      --line-height: 8em;
+    }
+  }
 
-        h1 {
-            text-align: center;
-        }
+  h1 {
+    text-align: center;
+}
 
-        main {
-            outline: thick double;
-            background-color: whitesmoke;
-        }
+main {
+    outline: thick double;
+    background-color: whitesmoke;
+}
 
-        fieldset {
-            display: flex;
-            border: none;
-            background: yellow;
-        }
+fieldset {
+    display: flex;
+    border: none;
+    background: yellow;
+}
 
-        form > fieldset {
-            flex-direction: var(--flex-direction);
-        }
+form > fieldset {
+    flex-direction: var(--flex-direction);
+}
 
-        fieldset fieldset {
-            background: red;
-        }
+fieldset fieldset {
+    background: red;
+}
 
-        fieldset input[type="range"] {
-            width: 20vw;
-            display: inline-block;
-            top: 0.3em;
-            position: relative;
-        }
+fieldset input[type="range"] {
+    width: 20vw;
+    display: inline-block;
+    top: 0.3em;
+    position: relative;
+}
 
-        form > fieldset > label {
-            background: turquoise;
-            line-height: var(--line-height);
-        }
+form > fieldset > label {
+    background: turquoise;
+    line-height: var(--line-height);
+}
 
-        form > header {
-            background: yellow;
-        }
+form > header {
+    background: yellow;
+}
 
-        [type="checkbox"] {
-        }
-    </style>
+[type="checkbox"] {
+}
+</style>
 </head>
 <body>
     <header>
