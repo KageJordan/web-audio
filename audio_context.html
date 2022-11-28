@@ -18,6 +18,8 @@
     }
   }
 
+  form fieldset { display: none }
+
   h1 {
     text-align: center;
   }
@@ -74,247 +76,269 @@
 
   <form action=#>
 
-  <header>
+    <header>
 
-    <label>
-      BPM
-      <input name=bpm value=251 min=10 max=522 type=range>
-    </label>
+      <label>
+        BPM
+        <input name=bpm value=251 min=10 max=522 type=range>
+      </label>
 
-    <label>
-      Play
-      <input name="Play" type="checkbox">
-    </label>
-  </header>
-
-  <fieldset>
-
-    <legend>Sweep</legend>
-
-    <label>
-      Attack
-      <input name="attack" value="0.2" min="0" max="1" step="0.1" type="range">
-    </label>
-
-    <label>
-      Release
-      <input name="release" value="0.5" min="0" max="1" step="0.1" type="range">
-    </label>
+      <label>
+        Play
+        <input name=play value='' type=checkbox >
+      </label>
+    </header>
 
     <fieldset>
 
-      <legend hidden>Checkboxes</legend>
+      <legend>Sweep</legend>
 
       <label>
-        <input name=pads type="checkbox">
+        Attack
+        <input name="attack" value="0.2" min="0" max="1" step="0.1" type="range">
       </label>
 
       <label>
-        <input name=pads type="checkbox">
+        Release
+        <input name="release" value="0.5" min="0" max="1" step="0.1" type="range">
       </label>
 
-      <label>
-        <input name=pads type="checkbox">
-      </label>
-
-      <label>
-        <input name=pads type="checkbox">
-      </label>
+      <fieldset>
+  
+        <legend hidden>Checkboxes</legend>
+  
+        <label>
+          <input name=pads type="checkbox">
+        </label>
+  
+        <label>
+          <input name=pads type="checkbox">
+        </label>
+  
+        <label>
+          <input name=pads type="checkbox">
+        </label>
+  
+        <label>
+          <input name=pads type="checkbox">
+        </label>
+  
+      </fieldset>
 
     </fieldset>
 
-  </fieldset>
-
-  <fieldset>
-
-    <legend>Pulse</legend>
-
-    <label>
-      Hz
-      <input name="hertz" value="880" min="660" max="1320" step="1" type="range">
-    </label>
-
-    <label>
-      LFO
-      <input name="lfo" value="30" min="20" max="40" step="1" type="range">
-    </label>
-
-  <fieldset>
-
-    <legend hidden>Checkboxes</legend>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-  </fieldset>
-
-  </fieldset>
-
-  <fieldset>
-    <legend>Noise</legend>
-
-    <label>
-      Duration
-      <input name="duration" value="1" min="0" max="2" step="0.1" type="range">
-    </label>
-
-    <label>
-      Band
-      <input name="band" value="1000" min="400" max="1200" step="5" type="range">
-    </label>
+    <fieldset>
+  
+      <legend>Pulse</legend>
+  
+      <label>
+        Hz
+        <input name="hertz" value="880" min="660" max="1320" step="1" type="range">
+      </label>
+  
+      <label>
+        LFO
+        <input name="lfo" value="30" min="20" max="40" step="1" type="range">
+      </label>
+  
+    <fieldset>
+  
+      <legend hidden>Checkboxes</legend>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+    </fieldset>
+  
+    </fieldset>
 
     <fieldset>
-
-    <legend hidden>Checkboxes</legend>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-  </fieldset>
-
-  </fieldset>
-
-  <fieldset>
-
-    <legend>DTMF</legend>
-
+      <legend>Noise</legend>
+  
       <label>
-        Rate
-        <input name="rate" value="1" min="0.1" max="2" step="0.1" type="range">
+        Duration
+        <input name="duration" value="1" min="0" max="2" step="0.1" type="range">
       </label>
+  
+      <label>
+        Band
+        <input name="band" value="1000" min="400" max="1200" step="5" type="range">
+      </label>
+  
+      <fieldset>
+  
+      <legend hidden>Checkboxes</legend>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+    </fieldset>
+  
+    </fieldset>
 
-  <fieldset>
-
-    <legend hidden>Checkboxes</legend>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-    <label>
-      <input name=pads type="checkbox">
-    </label>
-
-  </fieldset>
-
-  </fieldset>
+    <fieldset>
+  
+      <legend>DTMF</legend>
+  
+        <label>
+          Rate
+          <input name="rate" value="1" min="0.1" max="2" step="0.1" type="range">
+        </label>
+  
+    <fieldset>
+  
+      <legend hidden>Checkboxes</legend>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+      <label>
+        <input name=pads type="checkbox">
+      </label>
+  
+    </fieldset>
+  
+    </fieldset>
 
   </form>
 
 </main>
-  <script>
-    function initialize() {
-      const form = document.querySelector ('main > form')
-        , fieldsets = form.querySelectorAll ('fieldset')
 
-      console.log(fieldsets)
 
-      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
-      form.addEventListener ('submit', submit)
+<script>
 
-      for (let fieldset of fieldsets)
-      configure(fieldset)
 
-    }
-    // initialize
+void (function initialize () {
 
-    function configure(fieldset) {
-      const ranges = fieldset.querySelectorAll ('[type=range]')
-        , checkboxes = fieldset.querySelectorAll ('[type=checkbox]')
+  const
+    form = document.querySelector ('main > form')
+  , header = form.querySelector('header')
+  , bpm  = header.querySelector('[name=bpm]')
+  , play = header.querySelector('[name=play]')
+  , fieldsets = form.querySelectorAll ('fieldset')
 
-      for (let range of ranges) {
-      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
-      // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-      range.addEventListener('input', listen)
-    }
 
-    for (let box of checkboxes) {
-    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+  console.log('Beatz', bpm.value)
+
+  bpm.addEventListener('change', time)
+
+  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
+  play.addEventListener('click', sequence)
+
+  for (let fieldset of fieldsets)
+    configure(fieldset)
+
+})() // run program
+
+function time(event) {
+  let counter = 0
+
+  const
+    MILLISECONDS_PER_MINUTE = 60 * 1000
+  , BEATS_PER_MINUTE = Number( event.target.value )
+  , MILLISECONDS_PER_BEAT =
+      MILLISECONDS_PER_MINUTE / BEATS_PER_MINUTE
+
+  console.log("BPM", BEATS_PER_MINUTE)
+  console.log("Milliseconds per beat", Math.round(MILLISECONDS_PER_BEAT))
+
+  setInterval(() => console.log('beat', counter++), MILLISECONDS_PER_BEAT)
+}
+
+function sequence(event) {
+  const
+    playing = event.target.checked
+  , url = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'
+  , sound = new Audio(url)
+
+  
+  if(playing){
+    console.log('paused', sound.paused)
+
+    sound.addEventListener('canplaythrough', function () {
+      sound.play()
+      console.log('paused', sound.paused)
+    })
+  } else { // pause
+    sound.pause()
+    console.log('paused', sound.paused)
+  }
+}
+
+function configure(fieldset) {
+  const ranges = fieldset.querySelectorAll ('[type=range]')
+    , checkboxes = fieldset.querySelectorAll ('[type=checkbox]')
+
+  for (let range of ranges) {
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/input_event
     // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-    box.addEventListener('change', listen)
-    }
-    }
-    // configure
+    range.addEventListener('input', listen)
+  }
 
-    // ----------------------------------------------------------------------
-    // Events - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
-    // Event Handlers - https://developer.mozilla.org/en-US/docs/Web/Events
-    // e(vent) - https://developer.mozilla.org/en-US/docs/Web/API/Event
-    // ----------------------------------------------------------------------
+  for (let box of checkboxes) {
+  // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/change_event
+  // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+  box.addEventListener('change', listen)
+  }
+} // configure
 
-    function listen(e) {
-      e.preventDefault()
-      // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+// ----------------------------------------------------------------------
+// Events - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+// Event Handlers - https://developer.mozilla.org/en-US/docs/Web/Events
+// e(vent) - https://developer.mozilla.org/en-US/docs/Web/API/Event
+// ----------------------------------------------------------------------
+function listen(e) {
+  e.preventDefault()
+  // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 
-      console.log('Event listener for DOM element:', e.target)
-    } 
-   // listen
+  console.log('Event listener for DOM element:', e.target)
+} // listen
 
-   // ----------------------------------------------------------------------
-   // https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData
-   // https://developer.mozilla.org/en-US/docs/Web/API/FormData
-   // ----------------------------------------------------------------------
-   function submit(e) {
-     e.preventDefault()
-   // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+// ----------------------------------------------------------------------
+// https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent
+// https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent
+// ----------------------------------------------------------------------
+function formdata(e) {
+  e.preventDefault() // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 
-     const data = new FormData(e.target)
-     // triggers formdata event
+  console.log('FormData:', e.formdata)
+} // formdata
 
-            console.log('FormData:', data)
-   }
-   // submit
-
-   // ----------------------------------------------------------------------
-   // https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent
-   // https://developer.mozilla.org/en-US/docs/Web/API/FormDataEvent/FormDataEvent
-   // ----------------------------------------------------------------------
-   function formdata(e) {
-
-     e.preventDefault()
-    // https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
-
-     console.log('FormData:', e.formdata)
-   }
-   // formdata
-
-   initialize()
-   // run program
-
-  </script>
+</script>
 
 </body>
